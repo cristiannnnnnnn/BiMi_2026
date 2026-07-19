@@ -1,0 +1,16 @@
+[project]
+name = "bimi-submission"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=3.0.3",
+    "numpy>=2.0",
+    "scikit-learn>=1.9.0",
+    "joblib>=1.5.3",
+    "matplotlib>=3.11.0",
+    "torch>=2.13.0",
+    "jupyter>=1.1.1",
+    "ipykernel>=7.3.0",
+    "transformers>=4.0",
+    "einops>=0.8.2",
+]
