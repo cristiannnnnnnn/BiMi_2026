@@ -63,7 +63,7 @@ def score(name, te, pred, quiet=False):
     absent = K - len(np.unique(t))
     row = dict(eval=name,
                accuracy=(pred == t).mean(),
-               macro_f1=f1_score(t, pred, average="macro", zero_division=0),
+               macro_f1=f1_score(t, pred, labels=np.unique(t), average="macro", zero_division=0),  # only lecturers present in t, so absent classes don't force a 0 into the average
                weighted_f1=f1_score(t, pred, average="weighted", zero_division=0),
                zero_recall=int((rec == 0).sum()),
                classes_absent=absent)
